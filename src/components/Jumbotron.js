@@ -6,7 +6,7 @@ function Jumbotron() {
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
         <h1 className="display-4">Employee Rolodex</h1>
-        <p className="lead">scroll  ||  search by name  ||  sort by last name</p>
+        <p className="lead">scroll  ||  search by name or phone #  ||  sort by last name</p>
       </div>
     </div>
   );

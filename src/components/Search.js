@@ -1,12 +1,6 @@
 import React from "react";
 import "./style.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-
-const element = <FontAwesomeIcon icon={faSearch} />
-
-function Search(props) {
-  // Notice how each input has a `value`, `name`, and `onChange` prop
+const Search = props => {
   return (
     <div>
       <div className="input-group mb-3">
@@ -14,18 +8,12 @@ function Search(props) {
           value={props.search}
           onChange={props.handleInputChange}
           className="form-control"
+          // the next line corresponds to const name in handleInputChange (in GetSearchCriteria.js), which corresponds to they key 'search' in state object.
+          name="search"
           type="text"
           placeholder="Search"
           aria-label="Search"
           aria-describedby="basic-addon2" />
-        <div className="input-group-append">
-          <button
-            className="btn btn-outline-secondary"
-            type="button"
-            onClick={props.handleFormSubmit}>
-            {element}
-          </button>
-        </div>
       </div>
     </div>
   );
